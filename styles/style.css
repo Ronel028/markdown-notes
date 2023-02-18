@@ -1,0 +1,250 @@
+:root {
+  --very-light-yellow: #eae2b7;
+  --light-yellow: #eadc91;
+  --yellow: #e0bd02;
+  --dark: #45443f;
+  --white: #f1f1f1;
+  --red: #f56a6a;
+  --blue: #3c6ff1;
+  --border-color: #c9c3a4;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--very-light-yellow);
+  color: var(--dark);
+}
+
+input[type=text],
+textarea,
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--dark);
+  border: none;
+}
+input[type=text]::-moz-placeholder, textarea::-moz-placeholder, button::-moz-placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.875rem;
+}
+input[type=text]::placeholder,
+textarea::placeholder,
+button::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.875rem;
+}
+
+.btn {
+  border-radius: 7px;
+  padding: 10px 34px;
+  background-color: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+}
+
+a {
+  color: var(--dark);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1137px;
+  margin: 0 auto;
+}
+
+.auth-main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+.auth-main .auth-card {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-main .auth-card .auth-container {
+  padding: 50px 19px;
+  border-radius: 4px;
+  background-color: var(--light-yellow);
+}
+@media screen and (min-width: 600px) {
+  .auth-main .auth-card .auth-container {
+    padding: 70px 71px;
+  }
+}
+.auth-main .auth-card .auth-container .logo-title {
+  text-align: center;
+  margin-bottom: 61px;
+}
+.auth-main .auth-card .auth-container .logo-title h2 {
+  font-size: clamp(1.875rem, 1.3854rem + 2.448vw, 3.125rem);
+}
+.auth-main .auth-card .auth-container .logo-title p {
+  font-size: clamp(0.8125rem, 0.7391rem + 0.3672vw, 1rem);
+  font-weight: 400;
+}
+.auth-main .auth-card .auth-container .form {
+  width: 100%;
+}
+.auth-main .auth-card .auth-container .form input[type=text],
+.auth-main .auth-card .auth-container .form button {
+  border: 0;
+  outline: 0;
+}
+.auth-main .auth-card .auth-container .form input[type=text] {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 0px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--dark);
+  display: block;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 600px) {
+  .auth-main .auth-card .auth-container .form input[type=text] {
+    width: 326px;
+  }
+}
+.auth-main .auth-card .auth-container .form .auth-btn-container,
+.auth-main .auth-card .auth-container .form .login-route,
+.auth-main .auth-card .auth-container .form .register-route {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-main .auth-card .auth-container .form .auth-btn-container {
+  margin-bottom: 10px;
+}
+.auth-main .auth-card .auth-container .form .login-route a,
+.auth-main .auth-card .auth-container .form .register-route a {
+  font-size: 0.875rem;
+}
+.auth-main .auth-card .auth-container .form .login-route a:hover,
+.auth-main .auth-card .auth-container .form .register-route a:hover {
+  color: #272623;
+}
+
+.home-header .home-nav {
+  padding: 17px 0;
+  background-color: var(--light-yellow);
+  border-bottom: 1px solid var(--dark);
+}
+.home-header .home-nav .home-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-header .home-nav .home-nav-container h3 {
+  font-size: 1.875rem;
+}
+.home-header .home-nav .home-nav-container .home-write-notes {
+  padding: 9px 13px;
+  border-radius: 7px;
+  background-color: var(--dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.notes-list-section {
+  padding-bottom: 20px;
+}
+.notes-list-section .notes-list .heading {
+  padding: 12px 0px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 62px;
+}
+.notes-list-section .notes-list .heading h2 {
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+.notes-list-section .notes-list .notes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
+}
+@media screen and (min-width: 600px) {
+  .notes-list-section .notes-list .notes {
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+  }
+}
+.notes-list-section .notes-list .notes .notes-card {
+  background-color: var(--light-yellow);
+  border-radius: 8px;
+}
+.notes-list-section .notes-list .notes .notes-card .notes-nav-card {
+  padding: 8px 25px;
+  background-color: var(--dark);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.notes-list-section .notes-list .notes .notes-card .notes-nav-card .edit,
+.notes-list-section .notes-list .notes .notes-card .notes-nav-card .delete {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.notes-list-section .notes-list .notes .notes-card .notes-nav-card .edit {
+  background-color: var(--blue);
+}
+.notes-list-section .notes-list .notes .notes-card .notes-nav-card .delete {
+  background-color: var(--red);
+}
+.notes-list-section .notes-list .notes .notes-card h2 {
+  font-size: 1.5625rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.notes-list-section .notes-list .notes .notes-card .read-more {
+  background-color: var(--yellow);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 19px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notes-list-section .notes-list .notes .notes-card .read-more a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.notes-list-section .notes-list .notes .notes-card .read-more a:hover {
+  color: #272623;
+}
+
+.add-notes-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

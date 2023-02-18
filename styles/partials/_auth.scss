@@ -1,0 +1,74 @@
+@use "../variables/colors" as *;
+@use "../variables//function" as func;
+.auth-main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  .auth-card {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .auth-container {
+      padding: 50px 19px;
+      border-radius: 4px;
+      background-color: var(--light-yellow);
+      @media screen and (min-width: 600px) {
+        padding: 70px 71px;
+      }
+      .logo-title {
+        text-align: center;
+        margin-bottom: 61px;
+        h2 {
+          font-size: clamp(1.875rem, 1.3854rem + 2.448vw, 3.125rem);
+        }
+        p {
+          font-size: clamp(0.8125rem, 0.7391rem + 0.3672vw, 1rem);
+          font-weight: 400;
+        }
+      }
+      .form {
+        width: 100%;
+        input[type="text"],
+        button {
+          border: 0;
+          outline: 0;
+        }
+        input[type="text"] {
+          width: 100%;
+          margin: 0 auto;
+          padding: 8px 0px;
+          background-color: transparent;
+          border-bottom: 1px solid var(--dark);
+          display: block;
+          margin-bottom: 35px;
+          @media screen and (min-width: 600px) {
+            width: 326px;
+          }
+        }
+        .auth-btn-container,
+        .login-route,
+        .register-route {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .auth-btn-container {
+          margin-bottom: 10px;
+        }
+        .login-route,
+        .register-route {
+          a {
+            font-size: func.rem(14);
+            &:hover {
+              color: #272623;
+            }
+          }
+        }
+      }
+    }
+  }
+}

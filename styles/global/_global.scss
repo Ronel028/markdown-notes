@@ -1,0 +1,48 @@
+@use "../variables/colors" as *;
+@use "../variables//function" as func;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--very-light-yellow);
+  color: var(--dark);
+}
+
+input[type="text"],
+textarea,
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: func.rem(14);
+  color: var(--dark);
+  border: none;
+  &::placeholder {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: func.rem(14);
+  }
+}
+
+.btn {
+  border-radius: 7px;
+  padding: 10px 34px;
+  background-color: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+}
+
+a {
+  color: var(--dark);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1137px;
+  margin: 0 auto;
+}
