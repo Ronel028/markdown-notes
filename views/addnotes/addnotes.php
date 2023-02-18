@@ -5,6 +5,9 @@
 <body>
     <main class="add-notes-main">
         <div class="wrapper add-notes-container">
+            <div class="add-notes-heading">
+                <h1>Add new notes</h1>
+            </div>
             <form class="add-notes-form" id="saveNotes">
                 <div class="add-title">
                     <label for="note-title">Add title</label>
@@ -26,13 +29,13 @@
 <!-- Include the Quill library -->
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
-    var quill = new Quill('#editor', {
+    let quill = new Quill('#editor', {
         modules: {
             toolbar: [
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
             ['bold', 'italic', 'underline', 'strike'],
             ['code-block', 'link'],
-            [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+            [{ 'color': [] }, { 'background': [] }],
             [{ 'font': [] }],
             ]
         },
@@ -56,12 +59,15 @@
         title: "",
         content: ""
     }
+
+    // input event
     quill.on('text-change', function(delta, oldDelta, source) {
         value['content'] = quill.root.innerHTML
     });
     title.addEventListener("change", (e) =>{
         value['title'] = e.target.value
     })
+    // input event
 
 
     form.addEventListener("submit", (e) =>{

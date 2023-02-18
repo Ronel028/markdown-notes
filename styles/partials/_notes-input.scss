@@ -7,6 +7,10 @@
   align-items: center;
   padding: 20px 0;
   .add-notes-container {
+    .add-notes-heading {
+      padding: 12px 0;
+      border-bottom: 1px solid #c9c3a4;
+    }
     .add-notes-form {
       margin: 40px auto 0;
       display: flex;

@@ -62,6 +62,24 @@ a {
   margin: 0 auto;
 }
 
+.error {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--red);
+  padding: 10px 12px;
+  border-radius: 7px;
+  margin-bottom: 14px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+@media screen and (min-width: 600px) {
+  .error {
+    width: 326px;
+  }
+}
+
 .auth-main {
   width: 100%;
   height: auto;
@@ -248,6 +266,10 @@ a {
   display: flex;
   align-items: center;
   padding: 20px 0;
+}
+.add-notes-main .add-notes-container .add-notes-heading {
+  padding: 12px 0;
+  border-bottom: 1px solid #c9c3a4;
 }
 .add-notes-main .add-notes-container .add-notes-form {
   margin: 40px auto 0;
