@@ -1,3 +1,15 @@
+<?php 
+    // check if the user is login
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: http://".$_SERVER['HTTP_HOST']."/views/login/signin.php");
+    }
+    // check if the user is login
+
+    
+
+?>
+
 <?php include_once("../partials/head.php") ?>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <title>NsTK | Notes taking app</title>
@@ -70,9 +82,21 @@
     // input event
 
 
-    form.addEventListener("submit", (e) =>{
+    form.addEventListener("submit", async(e) =>{
         e.preventDefault()
-        console.log(value)
+        const formData = new FormData()
+        formData.append("notes_title", value.title)
+        formData.append("notes_content", value.content)
+        const insertNotes = await fetch("./services/addNotes.php", {
+            method: "POST",
+            body: formData
+        })
+        const result = await insertNotes.json()
+        if(result.msg){
+            window.location.href = "/views/nstk/nstk.php";
+        }else{
+            console.log("Error")
+        }
     })
 
 </script>

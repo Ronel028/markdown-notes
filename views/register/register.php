@@ -4,10 +4,10 @@
     $errorList = array();
     $error = "";
     if(isset($_POST["register"])){
-        $username = $_POST["username"];
+        $username = mysqli_real_escape_string($connection, $_POST["username"]);
 
         if($username === ""){
-            $errorList[] = "Please input username before login";
+            $errorList[] = "Please input username before register";
         }
         
         $getQuery = "SELECT * FROM account";
@@ -24,17 +24,20 @@
         if(count($errorList) > 0){
            $error = $errorList[0];
         }else{
-            $sqlQuery = "INSERT INTO `account`(`username`) VALUES ('$username')";
+
+            $stmt = $connection->prepare("INSERT INTO `account`(`username`) VALUES (?)");
+            $stmt->bind_param('s', $username);
             
-            $executeQuery = $connection->query($sqlQuery);
-    
-            if($executeQuery){
+            $stmt->execute();
+            $result = $stmt->affected_rows;
+            if($result > 0){
                 header("Location: http://".$_SERVER['HTTP_HOST']."/views/login/signin.php");
             }else{
                 header("Location: http://".$_SERVER['HTTP_HOST']."/views/register/register.php");
             }
+            $stmt->close();
         }
-
+        $connection->close();
     }
 ?>
 
