@@ -1,0 +1,20 @@
+.notes-content-section {
+  .home-btn {
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 62px;
+  }
+  .notes-content {
+    // background-color: var(--white);
+    .ql-syntax {
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      //   background-color: var(--dark);
+      //   color: var(--white);
+      border-radius: 7px;
+      padding: 10px;
+    }
+  }
+}

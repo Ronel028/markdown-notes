@@ -11,6 +11,7 @@
 ?>
 
 <?php include_once("../partials/head.php") ?>
+    <link rel="stylesheet" href="../highlight/styles/default.min.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <title>NsTK | Notes taking app</title>
 </head>
@@ -39,20 +40,28 @@
     <div id="displayData"></div>
 </body>
 <!-- Include the Quill library -->
+<script src="../highlight/highlight.min.js"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
+    
     let quill = new Quill('#editor', {
         modules: {
+            syntax: {
+                highlight: text => hljs.highlightAuto(text).value,
+            },
             toolbar: [
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
             ['bold', 'italic', 'underline', 'strike'],
             ['code-block', 'link'],
             [{ 'color': [] }, { 'background': [] }],
-            [{ 'font': [] }],
+            [{ 'font': [] }],[{ 'list': 'ordered'}, { 'list': 'bullet' }]
             ]
         },
         theme: 'snow'
     });
+
+    // Insert a numbered list
+    quill.formatLine(1, 1, { list: 'ordered' });
 
     // design editor
     document.querySelector(".ql-toolbar").style.backgroundColor = "#f1f1f1"

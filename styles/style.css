@@ -260,6 +260,10 @@ a {
 .notes-list-section .notes-list .notes .notes-card .read-more a:hover {
   color: #272623;
 }
+.notes-list-section .notes-list .notes .no-notes-found h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
 
 .add-notes-main {
   width: 100%;
@@ -309,4 +313,18 @@ a {
   color: var(--white);
   cursor: pointer;
   text-decoration: none;
+}
+
+.notes-content-section .home-btn {
+  padding: 12px 0px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 62px;
+}
+.notes-content-section .notes-content .ql-syntax {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 7px;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

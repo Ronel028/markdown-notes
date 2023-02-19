@@ -103,6 +103,12 @@
           }
         }
       }
+      .no-notes-found {
+        h3 {
+          font-size: func.rem(20);
+          font-weight: 400;
+        }
+      }
     }
   }
 }
