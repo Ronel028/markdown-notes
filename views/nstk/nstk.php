@@ -51,7 +51,7 @@
                     <?php foreach($notes_title as $notes){ ?>
                         <div class="notes-card">
                             <div class="notes-nav-card">
-                                <a href="#" class="edit">
+                                <a href="../updateNotes/updateNotes.php?userID=<?php echo $notes["userID"] ?>" class="edit">
                                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.625 9.34376V11.375H3.65625L9.64708 5.38417L7.61583 3.35292L1.625 9.34376ZM11.5971 3.43417L9.56583 1.40292L8.19542 2.77876L10.2267 4.81001L11.5971 3.43417Z" fill="white"/>
                                     </svg>
