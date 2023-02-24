@@ -25,7 +25,7 @@
 ?>
 
 <?php include_once("../partials/head.php") ?>
-    <link rel="stylesheet" href="../highlight/styles/default.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/default.min.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <title>NsTK | Notes taking app</title>
 </head>
@@ -55,7 +55,7 @@
     <div id="displayData"></div>
 </body>
 <!-- Include the Quill library -->
-<script src="../highlight/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
     

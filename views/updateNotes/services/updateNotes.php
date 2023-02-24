@@ -20,7 +20,7 @@
         if($result > 0){
             echo json_encode(array("msg"=>"Success"));
         }else{
-            echo json_encode(array("error"=>"Failed"));
+            echo json_encode(array("msg"=>"Failed"));
         }
 
         // close the connection and mysql statement

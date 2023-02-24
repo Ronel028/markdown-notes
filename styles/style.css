@@ -168,7 +168,12 @@ a {
 .home-header .home-nav .home-nav-container h3 {
   font-size: 1.875rem;
 }
-.home-header .home-nav .home-nav-container .home-write-notes {
+.home-header .home-nav .home-nav-container .left-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home-header .home-nav .home-nav-container .left-menu .home-write-notes {
   padding: 9px 13px;
   border-radius: 7px;
   background-color: var(--dark);
@@ -177,6 +182,11 @@ a {
   align-items: center;
   gap: 8px;
   text-decoration: none;
+}
+.home-header .home-nav .home-nav-container .left-menu .logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .notes-list-section {
